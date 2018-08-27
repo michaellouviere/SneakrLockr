@@ -1,0 +1,26 @@
+
+@mixin transition($property, $duration, $easing) {
+	-webkit-transition: $property $duration  $easing;
+	-moz-transition: $property $duration  $easing;
+	-ms-transition: $property $duration  $easing;
+	-o-transition: $property $duration  $easing;
+	transition: $property $duration  $easing;
+}
+
+
+@mixin translate($x, $y) {
+	-webkit-transform: translateX($x) translateY($y);
+	-moz-transform: translateX($x) translateY($y);
+	-ms-transform: translateX($x) translateY($y);
+	-o-transform: translateX($x) translateY($y);
+	transform: translateX($x) translateY($y);
+}
+
+
+@mixin box-shadow($value) {
+	-webkit-box-shadow: $value;
+	-moz-box-shadow: $value;
+	-ms-box-shadow: $value;
+	-o-box-shadow: $value;
+	box-shadow: $value;
+}
