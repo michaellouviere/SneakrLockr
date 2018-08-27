@@ -6,7 +6,7 @@ export default () => {
 	const store = createStore(
 		//Using combineReducers for extensibility
 		combineReducers({
-			expenses: inventoryReducer
+			inventory: inventoryReducer
 		}),
 		window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 	);
