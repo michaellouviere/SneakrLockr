@@ -1,0 +1,29 @@
+// Inventory Reducer
+const inventoryReducerDefaultState = [];
+
+const inventoryReducer = (state = inventoryReducerDefaultState, action) => {
+	switch (action.type) {
+		case 'ADD_INVENTORY':
+			return [
+				...state,
+				action.inventory
+			]
+		case 'REMOVE_INVENTORY':
+			return state.filter(({ id }) => id !== action.id);
+		case 'EDIT_INVENTORY':
+			return state.map((inventory) => {
+				if (inventory.id === action.id) {
+					return {
+						...inventory,
+						...action.updates
+					}
+				} else {
+					return inventory;
+				}
+			});
+		default: 
+			return state;
+	}
+};
+
+export default inventoryReducer;
