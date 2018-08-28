@@ -1,7 +1,7 @@
 import { createStore, combineReducers } from 'redux';
 import inventoryReducer from '../reducers/inventory';
 
-// Store Creation
+// Setup Store Creation
 export default () => {
 	const store = createStore(
 		//Using combineReducers for extensibility

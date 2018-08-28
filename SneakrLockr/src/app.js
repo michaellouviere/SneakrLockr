@@ -19,7 +19,6 @@ let i;
 // Create initial state
 // 1. 5x5 Grid
 // 2. First 5 items pre-populated with default randomly generated brand, style, size and UPC
-
 for (i = 0; i < initialItems; i++ ) {
 	if ( i <= 5 ) {
 		store.dispatch(addInventory({ brand: _.sample(brands), style: _.sample(styles), size: (Math.floor(Math.random() * 15) + 1).toString(), upcId: Math.floor(100000 + Math.random() * 999999999999).toString() }));

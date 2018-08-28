@@ -4,8 +4,24 @@
 	padding: 20px 0;
 	margin-bottom: 40px;
 
+	&__logo {
+		&:hover,
+		&:active,
+		&:focus {
+			text-decoration: none;
+		};
+	}
+
 	&__inner {
 		 @extend .container;
+	}
+
+	&__logo-tagling {
+		color: $gray-400;
+		font-size: .85rem;
+		font-style: italic;
+		font-weight: 100;
+		margin: 0;
 	}
 }
 

@@ -1,11 +1,25 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import InventoryForm from './InventoryForm';
+import { editInventory } from '../actions/inventory';
 
-const InventoryDashboardPage = (props) => (
+const InventoryEditPage = (props) => (
 	<div>
-		<h1 className="text-primary text-uppercase page-heading">Add/Edit Item</h1>
-		<Link to="/">Go Home</Link>
+		<h1 className="text-primary text-uppercase page-heading">{props.item.upcId ? 'Edit' : 'Add'} Inventory Item</h1>
+		<InventoryForm 
+			item={props.item} 
+			onSubmit={(item) => {
+				props.dispatch(editInventory(props.item.id, item));
+				props.history.push('/');
+			}}
+		/>
 	</div>
 );
 
-export default InventoryDashboardPage;
+const mapStateToProps = (state, props) => {
+	return {
+		item: state.inventory.find((item) => item.id === props.match.params.id)
+	};
+};
+
+export default connect(mapStateToProps)(InventoryEditPage);

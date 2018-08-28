@@ -5,10 +5,9 @@ import InventoryEditPage from '../components/InventoryEditPage';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-//Create 6 new files for components
-//Same naming conventions, setup imports, component, default export
-//Import into AppRouter so they can be used
-
+//Setup default app routing
+// '/' - Inventory Dashboard Page
+// 'edit/:id' - Used for both add and edit of inventory items where id is a unique UUID generated when addInventory action is dispatched
 const AppRouter = () => (
 	<BrowserRouter>
 		<div>

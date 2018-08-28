@@ -1,5 +1,7 @@
 import React from 'react';
 
+// Core Footer Component
+// Handles displaying contents of footer
 const Footer = () => {
 	return (
 		<footer className="footer">
