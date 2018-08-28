@@ -1,8 +1,11 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import EditIcon from '-!react-svg-loader!../assets/images/icons/icon-edit.svg';
 import RemoveIcon from '-!react-svg-loader!../assets/images/icons/icon-remove.svg';
 import AddIcon from '-!react-svg-loader!../assets/images/icons/icon-add.svg';
+import { editInventory } from '../actions/inventory';
+
 
 // class InventoryListItem extends React.Component {
 // 	constructor(props) {
@@ -51,7 +54,9 @@ const InventoryListItem = ({ dispatch, id, brand, style, size, upcId }) => {
 
 				<div className="inventory-items__controls">
 					<Link className="inventory-items__edit" to={`/edit/${id}`}><EditIcon /></Link>
-					<Link className="inventory-items__remove" to={`/edit/${id}`}><RemoveIcon /></Link>
+					<a className="inventory-items__remove" onClick={() => {
+						dispatch(editInventory(id, { brand: '', style: '', size: '', upcId: '' }));
+					}}><RemoveIcon /></a>
 				</div>
 			</div>
 		);
@@ -66,4 +71,4 @@ const InventoryListItem = ({ dispatch, id, brand, style, size, upcId }) => {
 	}
 }
 
-export default InventoryListItem;
+export default connect()(InventoryListItem);

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const InventoryDashboardPage = (props) => (
 	<div>
-		<h1>This is the edit inventory page for item with ID:{props.match.params.id}.</h1>
+		<h1 className="text-primary text-uppercase page-heading">Add/Edit Item</h1>
 		<Link to="/">Go Home</Link>
 	</div>
 );

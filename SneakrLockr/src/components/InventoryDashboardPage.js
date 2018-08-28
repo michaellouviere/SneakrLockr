@@ -4,7 +4,7 @@ import InventoryList from './InventoryList';
 
 const InventoryDashboardPage = (props) => (
 	<div>
-		<h1 className="text-primary text-uppercase">Sneaker Inventory</h1>
+		<h1 className="text-primary text-uppercase page-heading">Sneaker Inventory</h1>
 		<InventoryList />
 	</div>
 );
