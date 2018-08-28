@@ -4,9 +4,8 @@ import InventoryList from './InventoryList';
 
 const InventoryDashboardPage = (props) => (
 	<div>
-		<h1>Sneaker Inventory</h1>
+		<h1 className="text-primary text-uppercase">Sneaker Inventory</h1>
 		<InventoryList />
-		<Link to="/edit/4">Edit Item</Link>
 	</div>
 );
 

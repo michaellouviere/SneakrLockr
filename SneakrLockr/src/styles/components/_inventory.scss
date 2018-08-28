@@ -1,0 +1,36 @@
+.inventory {
+	height:100%;
+	width:100%;
+	margin-top: 20px;
+}
+
+.inventory-items {
+	display: flex;
+	flex-wrap:wrap;
+	margin:-5px 0 0 -5px;
+
+	&__item {
+		background: $gray-100;
+		margin: 5px 0 0 5px;
+		flex-grow: 1;
+		height: 200px;
+		padding: 20px;
+		text-align: center;
+		width: calc(100% * (1/5) - 5px);
+
+		h3 {
+			margin-bottom: 0;
+			@extend .text-success;
+		}
+	}
+
+	&__meta {
+		padding: 20px 0 0 0;
+
+		p {
+			margin: 0 0 5px 0;
+			font-size: .85rem;
+			@extend .text-secondary;
+		}
+	}
+}
